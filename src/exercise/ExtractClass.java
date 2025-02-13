@@ -3,26 +3,19 @@ public class ExtractClass {
 // todo extract class TelephoneNumber from class Person
 	class Person {
 	  private String name;
-	  private String officeAreaCode;
-	  private String officeNumber;
+	  private TelephoneNumber phoneNum = new TelephoneNumber();
+	public TelephoneNumber getPhoneNum() {
+		return phoneNum;
+	}
 
-	  public String getName() {
-		return name;
-	  }
-	  public String getTelephoneNumber() {
-		return ("(" + officeAreaCode + ") " + officeNumber);
-	  }
-	  public String getOfficeAreaCode() {
-		return officeAreaCode;
-	  }
-	  public void setOfficeAreaCode(String arg) {
-		officeAreaCode = arg;
-	  }
-	  public String getOfficeNumber() {
-		return officeNumber;
-	  }
-	  public void setOfficeNumber(String arg) {
-		officeNumber = arg;
-	  }
+	public void setPhoneNum(TelephoneNumber phoneNum) {
+		this.phoneNum = phoneNum;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName(String name) {
+		return this.name;
+	}
 	}
 }
