@@ -30,10 +30,7 @@ public class DecomposeConditional {
 		  }
 		  
 		  public boolean notSummer(Date date) {
-			  if(date.before(SUMMER_START) || date.after(SUMMER_END)) {
-				  return true;
-			  }
-			  return false;
+			  return date.before(SUMMER_START) || date.after(SUMMER_END) ? true : false;
 		  }
 		  
 		  public double summerCharge(int quantity) {
